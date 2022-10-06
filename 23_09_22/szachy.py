@@ -62,53 +62,72 @@ def zad3():
         plansze.append(["\n"])
         czarny = []
         bialy = []
-        szach = [] # biały, czarny
+        odp = [0,0] # biały, czarny
         for y in range(len(plansze)):
-            if plansze[y] == "\n":
-                wieza = False
-                krol = False
-                Szach = True
+            if plansze[y] == ["\n"]:
+                X = []
+                Y = []
+                Szach = False
+                for i in range(8): #y
+                    if plansze[y-8+i][bialy[1]] != ".":
+                        Y.append(plansze[y-8+i][bialy[1]])
                 for i in range(8): #x
                     if plansze[bialy[0]][i] != ".":
-                        if plansze[bialy[0]][i] == "K":
-                            krol = True
-                        elif plansze[bialy[0]][i] == "W":
-                            wieza = True
-                        if not wieza and krol:
-                            Szach = False
-                            break
-                        elif wieza and not krol:
-                            Szach = False
-                            break
-                        elif wieza and krol:
-                            break
+                        X.append(plansze[bialy[0]][i])
+                for i in range(len(X)):
+                    if X[i] == "K":
+                        if i != len(X)-1 :
+                            if X[i+1] == "w" :
+                                Szach = True
+                        if i != 0:
+                            if X[i-1] == "w":
+                                Szach = True
+                
+                for i in range(len(Y)):
+                    if Y[i] == "K":
+                        if i != len(Y)-1 :
+                            if Y[i+1] == "w" :
+                                Szach = True
+                        if i != 0:
+                            if Y[i-1] == "w":
+                                Szach = True
                 if Szach:
-                    szach[0]+=1
-                wieza = False
-                krol = False
-                Szach = True
-                for i in range(8): #y 
-                    if plansze[i][bialy[1]] != ".":
-                        if plansze[i][bialy[1]] == "k":
-                            krol = True
-                        elif plansze[i][bialy[1]] == "w":
-                            wieza = True
-                        if not wieza and krol:
-                            Szach = False
-                            break
-                        elif wieza and not krol:
-                            Szach = False
-                            break
-                        elif wieza and krol:
-                            break
+                    odp[1]+=1
+                Szach = False
+                X = []
+                Y = []
+                for i in range(8): #y
+                    if plansze[y-8+i][czarny[1]] != ".":
+                        Y.append(plansze[y-8+i][czarny[1]])
+                for i in range(8): #x
+                    if plansze[czarny[0]][i] != ".":
+                        X.append(plansze[czarny[0]][i])
+                for i in range(len(X)):
+                    if X[i] == "k":
+                        if i != len(X)-1 :
+                            if X[i+1] == "W" :
+                                Szach = True
+                        if i != 0:
+                            if X[i-1] == "W":
+                                Szach = True
+                
+                for i in range(len(Y)):
+                    if Y[i] == "k":
+                        if i != len(Y)-1 :
+                            if Y[i+1] == "W" :
+                                Szach = True
+                        if i != 0:
+                            if Y[i-1] == "W":
+                                Szach = True
                 if Szach:
-                    szach[0]+=1
+                    odp[0]+=1
                 continue
             for x in range(8):
                 if plansze[y][x] == "K": #biały
-                    bialy = [y][x]
+                    bialy = [y,x]
                 elif plansze[y][x] == "k": #czarny
-                    czarny = [y][x]
-        print(szach)
+                    czarny = [y,x]
+                
+        print(odp)
 
 zad3()
