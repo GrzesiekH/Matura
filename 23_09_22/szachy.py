@@ -1,3 +1,6 @@
+from curses.ascii import isupper
+
+
 def zad1():   
     with open("23_09_22/Dane/szachy_przyklad.txt") as file:
         plansze = []
@@ -27,32 +30,26 @@ def zad2():
         for e in file:
             plansze.append([*e[0:8]])
         plansze.append(["\n"])
-        figury = []
+        figury = {"K":0,"k":0, "W":0, "w":0, "S":0, "s":0,"H":0, "h":0, "G":0, "g":0, "P":0, "p":0 }
         odp = []
         for e in plansze:
             if e == ['\n'] :
+                max = 0
                 c = [0,0]
-                for x in figury:
-                    if x.isupper():
-                        c[0]+=1
-                    else:
-                        c[1]+=1
-                if c[0] != c[1]:
-                    continue
                 w = True
                 for x in figury:
-                    if x.isupper() and x.lower() not in figury:
+                    if figury[x].isupper() and figury[x] != figury[x].lower():
                         w = False
                         break
-                    elif x.upper() not in figury:
-                        w = False
+                    elif figury[x] != figury[x].upper():
+                        w =False
                         break
-                if w:
-                    odp.append(len(figury))
-
+                if w :
+                    c[0] += 1
+                    
             for i in range(len(e)):
                 if e[i] != ".":
-                    figury.append(e[i])
+                    figury[e[i]] += 1
         print(len(odp), min(odp))
 
 zad2()
