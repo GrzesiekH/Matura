@@ -1,5 +1,5 @@
 def zad1():   
-    with open("23_09_22/Dane/szachy_przyklad.txt") as file:
+    with open("23_09_22/Dane/szachy.txt") as file:
         plansze = []
         for e in file:
             plansze.append([*e[0:8]])
@@ -22,7 +22,7 @@ def zad1():
         print(len(counter), max(counter))
         
 def zad2():
-    with open("23_09_22/Dane/szachy_przyklad.txt") as file:
+    with open("23_09_22/Dane/szachy.txt") as file:
         plansze = []
         for e in file:
             plansze.append([*e[0:8]])
@@ -35,10 +35,10 @@ def zad2():
                 c = 0
                 w = True
                 for x in figury:
-                    if x.isupper() and figury[x] != figury[x.lower()]:
+                    if x.isupper() and figury[x] != figury[x.lower()] and figury[x] != 0:
                         w = False
                         break
-                    elif figury[x] != figury[x.upper()]:
+                    elif figury[x] != figury[x.upper()] and figury[x] != 0:
                         w = False
                         break 
                 if w :
@@ -55,7 +55,7 @@ def zad2():
         print(len(odp), min(odp))
 
 def zad3():
-    with open("23_09_22/Dane/szachy_przyklad.txt") as file:
+    with open("23_09_22/Dane/szachy.txt") as file:
         plansze = []
         for e in file:
             plansze.append([*e[0:8]])
@@ -128,6 +128,11 @@ def zad3():
                 elif plansze[y][x] == "k": #czarny
                     czarny = [y,x]
                 
-        print(odp)
+        print(*odp)
 
+print("zad 1")
+zad1()
+print("zad 2")
+zad2()
+print("zad 3")
 zad3()

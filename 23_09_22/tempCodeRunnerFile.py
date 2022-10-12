@@ -1,0 +1,1 @@
+        plansze.append(["\n"])
