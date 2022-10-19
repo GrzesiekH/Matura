@@ -1,3 +1,4 @@
--- select count(*) from (ewidencja inner join uczen on uczen.IdUcznia = ewidencja.IdUcznia) inner join klasa on uczen.IdKlasy = klasa.Idklasy where Imie like "%a" and ProfilKlasy = "biologiczno-chemiczny"
--- select count(*) from ewidencja where hour(wejscie)<= 7 and minute(wejscie) <=59 or hour(wejscie) = 8 and minute(wejscie) = 0 group by day(wejscie)
-select IdUcznia, (to_seconds(wyjscie) - to_seconds(wejscie)) from ewidencja inner join uczen using(IdUcznia) 
+select count(*) from (ewidencja inner join uczen on uczen.IdUcznia = ewidencja.IdUcznia) inner join klasa on uczen.IdKlasy = klasa.Idklasy where Imie like "%a" and ProfilKlasy = "biologiczno-chemiczny";
+select count(*) from ewidencja where hour(wejscie)<= 7 and minute(wejscie) <=59 or hour(wejscie) = 8 and minute(wejscie) = 0 group by day(wejscie);
+select IdUcznia, Imie, Nazwisko from ewidencja inner join uczen using(IdUcznia) group by idUcznia order by sum(to_seconds(wyjscie) - to_seconds(wejscie)) desc limit 3;
+select Imie, Nazwisko from (select distinct idUcznia from ewidencja inner join uczen using(IdUcznia) where day(Wejscie) = 6) as obecni right join uczen using(idUcznia) where obecni.idUcznia is null
