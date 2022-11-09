@@ -1,0 +1,2 @@
+-- select Rodzina, count(*) from jezyki group by Rodzina -- zad 1
+-- select count(*) from  jezyki as j where jezyk not in (select jezyk from uzytkownicy where urzedowy = "tak" group by jezyk)
