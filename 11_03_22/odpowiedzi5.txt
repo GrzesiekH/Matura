@@ -26,3 +26,17 @@ tungusko-mandzurska	1
 
 2
 445
+
+3
+arabski
+angielski
+tamilski
+gudzaracki
+
+4
+mandarynski	3.1
+arabski	2.7
+tagalog	1.9
+wietnamski	1.5
+nahuatl	1.4
+koreanski	1.2
