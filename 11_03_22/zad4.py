@@ -30,6 +30,7 @@ def zad1():
                             t = True
                     if t:
                         break
+                l.sort()
                 print(e[0],*l)
 
 def zad2():
@@ -58,7 +59,7 @@ def zad2():
 
 
 def zad3(): #TODO
-    with open("11_03_22/przyklad.txt") as file:
+    with open("11_03_22/pary.txt") as file:
         list1 = []
         for x in file:
             list1.append(x.split())       
@@ -68,16 +69,15 @@ def zad3(): #TODO
                 list.append(y)
         min = [0,""]
         for e in list:
-            n = "".join(sorted(e[1]))
             if min[0] == 0 and min[1] == "":
                 min[0] = e[0]
                 min[1] = e[1]
-            elif n < e[1]:
+            if min[1] > e[1]:
                 min[0] = e[0]
                 min[1] = e[1]
         print(*min)
             
            
-#zad1()
+zad1()
 #zad2()
-zad3()
+#zad3()
