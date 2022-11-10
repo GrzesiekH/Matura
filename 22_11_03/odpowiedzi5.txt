@@ -40,3 +40,8 @@ tagalog	1.9
 wietnamski	1.5
 nahuatl	1.4
 koreanski	1.2
+
+5
+Indonezja	jawajski	32.725155279503106
+Pakistan	pendzabski	40.44467972472208
+Etiopia	oromo	35.513078470824944
