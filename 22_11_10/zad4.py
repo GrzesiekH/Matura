@@ -8,8 +8,8 @@ def Pal(s):
     return True if s == s[::-1] else False
         
 def Pop(s):
-    sum = 7*Num(s[0]) + 3*Num(s[1]) + Num(s[2]) + 7*int(s[4]) + 3*int(s[5]) + int(s[6]) + 7*int(s[7]) + 3* int(3[8])
-    if sum == int(s[3]):
+    sum = 7*Num(s[0]) + 3*Num(s[1]) + Num(s[2]) + 7*int(s[4]) + 3*int(s[5]) + int(s[6]) + 7*int(s[7]) + 3* int(s[8])
+    if sum%10 == int(s[3]):
         return True
     else:
         return False
@@ -46,7 +46,10 @@ def zad3():
         list = []
         for x in file:
             list.append(x.strip())
-
+        for y in list:
+            if not Pop(y):
+                print(y)
         
 # zad1()
 # zad2()
+zad3()
