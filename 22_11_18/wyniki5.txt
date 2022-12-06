@@ -1,0 +1,21 @@
+1
+koszta 15950
+przychody 39600
+1.06.2023
+
+
+2
+zad5_2.png
+
+
+3
+a) 47
+b) 57
+c) 66
+
+
+4
+przychody 192175
+koszta 57455
+
+
