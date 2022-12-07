@@ -1,0 +1,28 @@
+1
+Gniezno	152
+Malbork	183
+Ogrodzieniec	222
+Przemysl	198
+
+
+2
+8 dni
+początek 7.10.2021 
+koniec 14.10.2021
+
+
+3
+zad5_3.png
+
+
+4
+pierwszy dzień 19.03.2021
+pierwsze zamówienie 154
+
+liczba filii	37
+suma filii	285230
+
+
+5
+13179
+

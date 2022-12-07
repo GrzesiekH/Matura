@@ -1,5 +1,5 @@
 def zad1():   
-    with open("23_09_22/Dane/szachy.txt") as file:
+    with open("22_09_23/Dane/szachy.txt") as file:
         plansze = []
         for e in file:
             plansze.append([*e[0:8]])
@@ -22,7 +22,7 @@ def zad1():
         print(len(counter), max(counter))
         
 def zad2():
-    with open("23_09_22/Dane/szachy.txt") as file:
+    with open("22_09_23/Dane/szachy.txt") as file:
         plansze = []
         for e in file:
             plansze.append([*e[0:8]])
@@ -55,7 +55,7 @@ def zad2():
         print(len(odp), min(odp))
 
 def zad3():
-    with open("23_09_22/Dane/szachy.txt") as file:
+    with open("22_09_23/Dane/szachy.txt") as file:
         plansze = []
         for e in file:
             plansze.append([*e[0:8]])
