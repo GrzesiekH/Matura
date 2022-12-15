@@ -40,6 +40,53 @@ def zad3():
             if e.split()[0] == "DOPISZ":
                 dop.append(e.split()[1])
         maks = [0,""]
-        
+        for x in dop:
+            c = dop.count(x)
+            if c > maks[0]:
+                maks[0] = c
+                maks[1] = x
+        print(*maks)
 
-zad3()
+def d(word,letter):
+    return "".join([word,letter])
+def z(word, letter):
+    l = list(word)
+    l.pop()
+    l.append(letter)
+    return "".join(l)
+def u(word):
+    l = list(word)
+    l.pop()
+    return "".join(l)
+def p(word, letter):
+    l = list(word)
+    for i in range(len(l)):
+        if l[i] == letter:
+            if letter == "Z":
+                l[i] = "A"
+            else:
+                l[i] = chr(ord(letter)+1)
+            break
+    return "".join(l)
+
+
+
+def zad4():
+    with open("22_12_08/przyklad_neon.txt") as file:
+        list = [e.strip() for e in file]
+        word = ""
+        for x in list:
+            letter = x.split()[1]
+            command = x.split()[0]
+            if command == "DOPISZ":
+                word = d(word,letter)
+            elif command == "ZAMIEN":
+                word = z(word,letter)
+            elif command == "USUN":
+                word = u(word)
+            elif command == "PRZESUN":
+                word = p(word,letter)
+        print(word)
+
+
+zad4()
