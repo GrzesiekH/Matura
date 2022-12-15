@@ -1,0 +1,32 @@
+1
+1	11
+2	9
+3	9
+4	7
+5	6
+6	10
+7	11
+8	6
+9	12
+10	8
+11	16
+12	14
+13	7
+14	12
+15	6
+
+
+2
+jeden z miasta 78	
+dwa z miasta 21
+
+
+3
+a) 114
+b) 19:54
+
+
+5
+drugi rezygnacja KP566
+suma rezygnacja 44
+maks rezygnacja 3
