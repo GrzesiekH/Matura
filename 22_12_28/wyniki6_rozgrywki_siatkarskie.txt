@@ -1,0 +1,55 @@
+1
+109
+
+2
+Wiralow	41
+Kukurykow	39
+Szymbark	32
+Preziowo	30
+Bialowo	21
+Gorkowo	18
+Kielkowo	17
+Licowo 	15
+Sadelko	15
+Radelko	15
+Koszalkowo	15
+Orecin	14
+Barylkowo	14
+Warkowo	13
+Rezkow	13
+Lewkowo	12
+
+3
+Katarzyna	Olszewska
+Franciszek	Dudek
+Natalia	Jankowska
+Barbara	Kaczmarek
+Monika	Kowalczyk
+Szymon	Rutkowski
+Kamila	Majewska
+
+4
+Jan	Malinowski
+Anna	Nowak
+Zbigniew	Michalak
+Agnieszka	Wieczorek
+Natalia	Jankowska
+Kamila	Majewska
+Piotr	Lewandowski
+Franciszek	Dudek
+Barbara	Kaczmarek
+Zofia	Grabowska
+
+5
+Sfinks	Szymbark	9	7
+Zenit	Licowo 	8	7
+Victoria	Radelko	10	5
+Zjednoczeni	Kukurykow	10	8
+Olimpia	Orecin	9	5
+Stolar	Wiralow	11	9
+Astecja	Rezkow	10	3
+Bradownia	Preziowo	9	9
+Spirca	Lewkowo	6	6
+Huraganer	Szymbark	8	8
+Waleczni	Preziowo	7	5
+Libero	Warkowo	8	5
