@@ -1,0 +1,28 @@
+1
+n   k   i   _
+a   t   e   _
+u   s   g  A
+c   y   o   k
+z   z   _   y
+y   s   j   t
+c   w   e   k
+i   _   s   a
+e   m   t   r
+l   e   _   p
+nauczycielem wszystkiego jest praktyka
+
+2
+T = []
+a = n//k
+for i in range(a):
+    if i%2 == 0:
+        j = 0
+        while j<k:
+            T.append(S[i+j*a])
+            j+=1
+    else:
+        j = k-1
+        while j>=0:
+            T.append(S[i+j*a])
+            j-=1
+print("".join(T))
