@@ -1,0 +1,3 @@
+2
+b, r
+y, (x - a div b)* y
