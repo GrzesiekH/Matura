@@ -1,0 +1,16 @@
+1
+wymiana końcówki drążka	12	
+wymiana tarcz hamulcowych	12		
+
+2
+Mercedes	Sprinter	32	
+
+3
+AA023	
+
+4
+AA007		02:59:00
+
+5
+A) AA019	8915	
+B) 88170

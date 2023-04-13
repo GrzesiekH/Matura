@@ -1,0 +1,6 @@
+select nazwa, count(*) as ile from serwis join naprawy USING(id_naprawy) group by id_naprawy order by ile desc;
+select marka,model,count(*) as ile from serwis join auta using(nr_rejestracyjny) GROUP by marka, model order by ile desc limit 1;
+select nr_rejestracyjny from auta where nr_rejestracyjny not in (select nr_rejestracyjny from serwis);
+select * from serwis order by czasnaprawy desc;
+select nr_rejestracyjny,sum(cena_materialow + cena_roboczo_h*czasnaprawy) as cena from serwis join naprawy using(id_naprawy) group by nr_rejestracyjny order by cena DESC limit 1;
+select sum(cena_materialow + cena_roboczo_h*czasnaprawy) as cena from serwis join naprawy using(id_naprawy);
